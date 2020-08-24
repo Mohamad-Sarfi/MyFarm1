@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/GL0"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/weather"
+        android:gravity="center"
+        android:padding="10dp"
+        >
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/sprout"
+            tools:layout_editor_absoluteX="141dp"
+            tools:layout_editor_absoluteY="84dp"
+            app:layout_constraintBottom_toTopOf="@+id/titleTxt1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="خوش آمدید!"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/khandevane"
+            android:textSize="26sp"
+            android:layout_marginTop="15dp"
+
+            />
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleTxt1"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:text="برای افزودن باغ علامت + را در بالا سمت راست لمس کنید."
+            android:textSize="18sp"
+            android:fontFamily="@font/khandevane"
+            android:textColor="@color/colorAccent"
+            android:alpha="0.8"
+            android:padding="10dp"
+            android:gravity="center"
+            />
+
+
+    </LinearLayout>
+
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/table"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/weather"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="invisible"
+        >
+
+        <TableRow>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/b1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/b3"
+                app:layout_constraintEnd_toStartOf="@id/b2"
+                android:gravity="center"
+                android:layout_margin="20dp"
+                >
+
+                <ImageButton
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:id="@+id/b11"
+                    android:src="@drawable/pesticide1"
+                    android:adjustViewBounds="true"
+                    android:foregroundGravity="center"
+                    android:scaleType="fitCenter"
+                    android:padding="25dp"
+                    android:onClick="tap"
+                    android:tag="0"
+                    android:background="@drawable/b2_back"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="سمپاشی"
+                    android:gravity="center"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/persian"
+                    android:layout_marginTop="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/b2"
+                app:layout_constraintStart_toEndOf="@id/b1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/b3"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_margin="20dp"
+                >
+
+                <ImageButton
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:id="@+id/b22"
+                    android:src="@drawable/fertilizer"
+                    android:background="@drawable/b1_back"
+                    android:text="تغذیه"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/persian"
+                    android:scaleType="fitCenter"
+                    android:padding="30dp"
+                    android:onClick="tap"
+                    android:tag="1"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="تغذیه"
+                    android:gravity="center"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/persian"
+                    android:layout_marginTop="10dp"
+                    />
+
+            </LinearLayout>
+
+        </TableRow>
+        <TableRow>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/b3"
+            app:layout_constraintTop_toBottomOf="@id/b1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <ImageButton
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:id="@+id/b33"
+                android:src="@drawable/watering"
+                android:scaleType="fitCenter"
+                android:padding="30dp"
+                android:background="@drawable/b3_back"
+                android:tag="2"
+                android:onClick="tap"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="آبیاری"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:fontFamily="@font/persian"
+                android:layout_marginTop="10dp"
+                />
+
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/b4"
+                app:layout_constraintTop_toBottomOf="@id/b1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <ImageButton
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:id="@+id/b44"
+                    android:src="@drawable/tractor"
+                    android:scaleType="fitCenter"
+                    android:padding="30dp"
+                    android:background="@drawable/b4_back"
+                    android:tag="3"
+                    android:onClick="tap"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="متفرقه"
+                    android:gravity="center"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/persian"
+                    android:layout_marginTop="10dp"
+                    />
+
+
+            </LinearLayout>
+
+        </TableRow>
+    </TableLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weather"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="554dp"
+        android:background="@drawable/weather_back"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/table"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="5dp"
+        android:elevation="4dp"
+        >
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/sunny"
+            tools:layout_editor_absoluteX="-14dp"
+            tools:layout_editor_absoluteY="-34dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:id="@+id/weather_Txt"
+            android:text="پیشبینی آب و هوا"
+            android:textSize="20sp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageView2"
+            android:textColor="#fff"
+            android:fontFamily="@font/persian"
+            android:layout_marginStart="30dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

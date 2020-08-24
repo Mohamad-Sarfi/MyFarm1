@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductInputActivity">
+
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pistachio_selected"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/PIImage"
+        android:layout_marginTop="30dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/PIImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="30dp"
+        android:id="@+id/PIl1"
+        android:gravity="center"
+
+        >
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/pi_spinner"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="نام باغ: "
+            android:textSize="17sp"
+            android:fontFamily="@font/persian"
+            android:gravity="end"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="40dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PIl2"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/PIl1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        >
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="مقدار فروش به کیلوگرم"
+            android:textSize="18sp"
+            android:fontFamily="@font/persian"
+            android:background="@drawable/insight_back"
+            android:padding="10dp"
+            android:elevation="2dp"
+            android:layout_margin="5dp"
+            />
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/persian"
+            android:background="@drawable/insight_back"
+            android:padding="10dp"
+            android:elevation="2dp"
+            android:hint="توضیحات اضافه"
+            android:layout_margin="5dp"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/PIl3"
+        app:layout_constraintTop_toBottomOf="@id/PIl2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:textColor="@color/colorPrimary"
+            android:text="نوع فروش"
+            android:fontFamily="@font/persian"
+            />
+
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/PIRadioGroup"
+        android:orientation="horizontal"
+        android:gravity="center"
+
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="تر"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/persian"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="خشک"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/persian"
+            />
+
+
+    </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PIl4"
+        app:layout_constraintTop_toBottomOf="@id/PIl3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="تاریخ"
+            android:textSize="19sp"
+            android:fontFamily="@font/persian"
+            android:textColor="@color/colorPrimary" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PIl5"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/PIl4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+
+        >
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="ثبت"
+            android:fontFamily="@font/persian"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:background="@drawable/confirm_back"
+            android:textStyle="bold"
+            android:elevation="4dp"
+            />
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home_nav_selector"
+        android:title="اصلی"
+        android:enabled="true"
+        />
+
+
+    <item android:id="@+id/navigation_insights"
+        android:icon="@drawable/insights_nav_selector"
+        android:title="توصیه ها"
+        />
+
+    <item
+        android:id="@+id/navigation_gardens"
+        android:icon="@drawable/gardens_nav_back"
+        android:title="باغ ها"
+
+        />
+
+    <item
+        android:id="@+id/navigation_products"
+        android:icon="@drawable/products_nav_selector"
+        android:title="محصولات" />
+
+
+
+
+</menu>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="25dp"
+        android:id="@+id/il1"
+        android:gravity="center"
+        >
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/i_spinner"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="نام باغ: "
+            android:textSize="17sp"
+            android:fontFamily="@font/persian"
+            android:gravity="end"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="40dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/il1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/il2"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="مدت آبیاری:"
+        android:fontFamily="@font/persian"
+        android:textColor="@color/colorPrimary"
+        android:textSize="17sp"
+        android:layout_margin="5dp"
+        />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:progress="3"
+            android:layout_margin="10dp"
+            android:progressTint="#000"
+            android:thumb="@drawable/stopwatch"
+            android:elevation="2dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text=" 5 ساعت"
+            android:fontFamily="@font/persian"
+            android:id="@+id/seekBarTxt"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/il3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/il2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idateTxt"
+            android:textSize="17sp"
+            android:text="1398/4/2"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:text="تاریخ:"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="80dp"
+            android:fontFamily="@font/persian"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/il4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/il3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        android:gravity="center"
+
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:text="میزان آبیاری"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/persian"
+            android:layout_margin="10dp"
+            />
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:id="@+id/radioGroup"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb1"
+                android:text="کم"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/persian"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb2"
+                android:text="متوسط"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/persian"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb3"
+                android:text="زیاد"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/persian"
+                />
+
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/i_button"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:text="تایید"
+        android:fontFamily="@font/persian"
+        android:background="@drawable/confirm_back"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@id/il4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

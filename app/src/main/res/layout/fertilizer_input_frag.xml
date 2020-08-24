@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/input_back"
+
+    >
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="25dp"
+        android:id="@+id/fl1"
+        android:gravity="center"
+
+        >
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/f_spinner"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="نام باغ: "
+            android:textSize="17sp"
+            android:fontFamily="@font/persian"
+            android:gravity="end"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="40dp"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/fl1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_margin="25dp"
+        android:id="@+id/fl2"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:gravity="end"
+            >
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="ماده ۱"
+                android:textSize="17sp"
+                android:id="@+id/m2ETX"
+
+                />
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="ماده 2"
+                android:textSize="17sp"
+                android:id="@+id/m1ETX"
+                />
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="ماده 3"
+                android:textSize="17sp"
+                android:id="@+id/m3ETX"
+                />
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="ماده 4"
+                android:textSize="17sp"
+                android:id="@+id/m4ETX"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="مواد استفاده شده:"
+            android:textSize="17sp"
+            android:fontFamily="@font/persian"
+            android:textColor="@color/colorPrimary"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fl3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/fl2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="25dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:text="تاریخ را اضافه کنید"
+            android:id="@+id/f_dateTV"
+            android:fontFamily="@font/persian"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:text="تاریخ:"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="70dp"
+            android:fontFamily="@font/persian"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/f_button"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:text="تایید"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="423dp"
+        android:fontFamily="@font/persian"
+        android:background="@drawable/confirm_back"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@id/fl3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

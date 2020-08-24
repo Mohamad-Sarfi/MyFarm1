@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="25dp"
+        android:id="@+id/ol1"
+        android:gravity="center"
+        android:padding="3dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/p_spinner"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="نام باغ: "
+            android:textSize="17sp"
+            android:fontFamily="@font/persian"
+            android:gravity="end"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="40dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ol2"
+        app:layout_constraintTop_toBottomOf="@id/ol1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:elevation="2dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:text="توضیحات"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:fontFamily="@font/persian"
+        android:layout_margin="10dp"
+        />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="فقالیت های انجام شده را وارد کنید"
+            android:textSize="17sp"
+            />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/addETxt"
+            android:src="@drawable/add_1"
+            android:background="#fff"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_margin="10dp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ol3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ol2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="25dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/odateTxt"
+            android:textSize="17sp"
+            android:text="1398/4/2"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:text="تاریخ:"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="80dp"
+            android:fontFamily="@font/persian"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/o_button"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:text="تایید"
+        android:fontFamily="@font/persian"
+        android:background="@drawable/confirm_back"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@id/ol3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
